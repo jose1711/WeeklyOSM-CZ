@@ -27,6 +27,11 @@ sedfile 's/>About us</>O nás</;
          s/>Upcoming Events</>Plánované události</;
          s/>Long term dates</>Pozdější důležité akce</;
          
+         s/>Software</>software</;
+         s/>Version</>verze</;
+         s/>Release Date</>datum vydání</;
+         s/>Comment</>komentář</;
+
          s/>Where</>kde</;
          s/>What</>co</;
          s/>When</>kdy</;
