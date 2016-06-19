@@ -39,7 +39,7 @@ sedfile 's/>About us</>O nás</;
          
          s/>‘’’/>/g;
 
-         s/provided by the /poskytuje /;
+         s/provided by the /Poskytuje /;
         ' $1.html
 
 vim $1.html
