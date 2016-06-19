@@ -24,10 +24,11 @@ sedfile 's/>About us</>O nás</;
          s/>Releases</>Nová vydání</;
          s/>Did you know .</>Vědeli jste ...</;
          s/>Other .geo. things</>Ostatní "geo" záležitosti</;
+         s/>Events</>Události</;
          s/>Upcoming Events</>Plánované události</;
          s/>Long term dates</>Pozdější důležité akce</;
          
-         s/>Software</>software</;
+         s/th>Software</th>software</;
          s/>Version</>verze</;
          s/>Release Date</>datum vydání</;
          s/>Comment</>komentář</;
