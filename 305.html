@@ -117,204 +117,113 @@ a {
 
 <!-- START -->
 
-
-
-17.05.  - 23.05.2016
+17.05. - 23.05.2016
 
 <!-- place picture here -->
 <div class="wp-caption alignnone" style="width: NaNpx;">
-<p class="wp-caption-text"><img
-src="http://blog.openstreetmap.de/wp-uploads//2016/05/27102864935_010ca77de4_o-bc.jpg"
-alt="Logo" /> Upravený styl Outdoors od Mapboxu <a href="#wn305_mapbox_outdoor">[1]</a></p>
+<p class="wp-caption-text"><img src="http://blog.openstreetmap.de/wp-uploads//2016/05/27102864935_010ca77de4_o-bc.jpg" alt="Logo" /> Upravený styl Outdoors od Mapboxu <a href="#wn305_mapbox_outdoor">[1]</a></p>
 
 </div>
+<h2>Téma: Chodník vs. chodník</h2>
+Když dva dělají totéž, není to vždy totéž. A když dva vypadají a jmenují se stejně? Řeč je tentokrát o chodnících. V praxi se vyskytují chodníky highway=footway (tedy typicky dlážděné či asfaltové cesty vyhrazené primárně či výhradně pro provoz chodců) z hlediska účelu a dislokace v různých podobách. Autoři rendererů by v mapách rádi odlišili některé nuance chodníků a proto prosadili tag footway=sidewalk. Sledují tím možnost odlišení chodníků vedoucích kolem silnic od chodníků spojujících různá místa např. napříč veřejnou zelení. Mappeři však tuto jejich snahu příliš nerespektují a tak se do lobbingu musel zapojit i komerční zpracovatel OSM datových podkladů Mapbox.
 
-<h2 >Téma:</h2>
-xxx
+"Snažíme se jinak vykreslovat chodníky, tedy kolem kolem silnic a jinak chodníčky, které vedou samostatně. Vypadá to lépe a my bychom toho chtěli dosáhnout v celosvětovém měřítku", popisuje snahu inženýr Mapboxu Tim Channell. "Vytvořili jsme i webovou aplikaci, která se snaží odhadnout, které chodníky asi vedou kolem silnice a nemají tag footway=sidewalk. Když najdete ten svůj chodník, jen na něj v mapě klikněte a rovnou jej opravte ve svém oblíbeném editoru," dodává Tim. Aplikaci naleznete na stránce <a href="https://www.mapbox.com/blog/mapping-sidewalks/" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=cs&amp;q=https://www.mapbox.com/blog/mapping-sidewalks/&amp;source=gmail&amp;ust=1466266861677000&amp;usg=AFQjCNECzcrAHUZOtUgG88PasTbZbKy3EA">https://www.mapbox.com/blog/<wbr />mapping-sidewalks/</a>
 
-<h2 >OSM CZ</h2>
+Cílem mapdesignérů je definovat chodníky, které jsou od silnice zpravidla odděleny jen obrubníkem, nebo úzkým pásem zeleně. V mapě je pak mohou zobrazit jinak, než fyzicky stejně vypadající asfaltové chodníky, které ale mohou mít jiný charakter využití, např. nejsou nebezpečné pro pohyb dětí u frekventované silnice. Rozlišovací tag <a href="http://wiki.openstreetmap.org/wiki/Cs:Key:sidewalk">footway=sidewalk</a> zná a popisuje delší dobu i česká OSM wiki.
+
+Malé shrnutí:
+Pro mapování chodníků a intravilánových stezek pro chodce používáme primárně highway=footway. Zpravidla jde o asfaltovou nebo dlážděnou cestu určenou primárně pro pohyb chodců. Tag footway=sidewalk přidáváme tehdy, když jde chodník bezprostředně nebo společně s úzkým travnatým pásem (i se stromy) v souběhu se silnicí. Pro mapování extravilánových stezek pro chodce používáme primárně tag highway=path. Zpravidla jde o nezpevněné cesty a pěšiny v lese či mezi loukami.
+Pro mapování ploch určených pro chodce, jako jsou náměstí nebo široké pěší zóny, používáme zpravidla plochu (uzavřenou cestu) s tagem highway=pedestrian doplněným o area=yes.
+Hodnotu sidewalk lze použít i jako klíč, tedy sidewalk=*. Tímto způsobem lze zmapovat chodník těsně přiléhající k silnici. To lze použít tam, kde by bylo vykreslení chodníku kolem celé silnice zbytečně pracné, nebo tam, kde autorovi nutně nezáleží na tom, aby byl výsledný render dokonalou kopií reálu (ne všechny renderery si s tímto tagem umí poradit). Rizikem je i nutnost použít hodnoty left/right/both, které jsou závislé na směru (vektoru) cesty v OSM a tím náchylné na lidskou chybu např. při úpravách dalším mapperem.
+<h2>OSM CZ</h2>
 <ul>
-<li></li>
+ 	<li>Informace o <a href="https://lists.openstreetmap.org/pipermail/talk-cz/2016-May/014186.html">poznámkách uživatelů</a> přidána na <a href="http://openstreetmap.cz/poznamky-uzivatelu">osmap.cz</a>. A přeloženo na wiki.</li>
+ 	<li>Fotky od Mariána z SotM CZ+SK na <a href="https://lists.openstreetmap.org/pipermail/talk-cz/2016-May/014188.html">flickeru</a>.</li>
+ 	<li>Myšlenky o <a href="https://lists.openstreetmap.org/pipermail/talk-cz/2016-May/014192.html">blozích pro osmap.cz</a> anebo co by mohl Jáchym agregovat?</li>
+ 	<li>Aktualizace Pavla Machka o <a href="https://lists.openstreetmap.org/pipermail/talk-cz/2016-May/014193.html">situaci s jízdními řády</a>.</li>
+ 	<li>Jáchym Čepický <a href="https://lists.openstreetmap.org/pipermail/talk-cz/2016-May/014194.html">opět lobuje</a> za spojenou organizaci OSM a OSGeo.</li>
 </ul>
-
-<h2 >OSM SK</h2>
+<h2>OSM SK</h2>
 <ul>
-<li></li>
+ 	<li>Informace o úpravě stránek o <a href="https://groups.google.com/forum/#!topic/osm_sk/SCw75Gd-G4Y">SotM CZ+SK do post-konferenční podoby</a> a diskuze zúčastněných Slováků.</li>
+ 	<li><a href="https://groups.google.com/forum/#!topic/osm_sk/kkjMvnJgMgQ">Vyhledávání</a> na freemap.sk. Jak často se vlastně aktualizují data pro vyhledávač.</li>
 </ul>
-
-
 <h2 id="wn305_about_us">O nás</h2>
 <ul>
- 	<li id="wn305_12032">Tomáš Kašpárek, člen týmu weeklyOSM z Brna <a href="https://twitter.com/osmcz/status/734010134402347008">prezentoval</a>
-  weeklyOSM na konferenci SotM CZ+SK.</li>
+ 	<li id="wn305_12032">Tomáš Kašpárek, člen týmu weeklyOSM z Brna <a href="https://twitter.com/osmcz/status/734010134402347008">prezentoval </a>weeklyOSM na konferenci SotM CZ+SK.</li>
 </ul>
-
 <h2 id="wn305_mapping">Mapování</h2>
 <ul>
- 	<li id="wn305_12059">Adrien z Francouzské Guyana <a
-  href="https://twitter.com/adrienandrem/status/722483348506034179">zmiňuje</a>,
-  jak využít satelitní fotografie SENTINEL1 s pomocí RADAR a GDAL pro
-  editace v JOSM.</li>
- 	<li id="wn305_12057">Jak mohou noví mappeři pomoci HOT týmu s validací?
-  Přečtěte <a
-  href="http://www.openstreetmap.org/user/bgirardot/diary/36235">si více</a>.</li>
- 	<li id="wn305_12050">Robert Whittaker <a
-  href="http://robert.mathmos.net/osm/defib/progress/">vizualizoval</a>
-  postup mapování defibrilátorů ve Velké Británii.</li>
- 	<li id="wn305_12028">V sérii blogových zápisků Mapzenu na téma cílené
-  mapování se Indy Hurts zaměřuje tentokrát na <a
-  href="https://mapzen.com/blog/targeted-editing-cycleways/">mapování
-  cyklostezek</a>.</li>
- 	<li id="wn305_12043">Joachim <a
-  href="https://lists.openstreetmap.org/pipermail/tagging/2016-May/029231.html">navrhuje</a>
-  nový prefix <code>scheduled:</code> pro objekty, které jsou již
-  naplánovány ale nezačala ještě jejich stavba.</li>
- 	<li id="wn305_12011">Marc Gemins <a
-  href="https://lists.openstreetmap.org/pipermail/tagging/2016-May/029245.html">se
-  ptá</a> zda by průmyslové zásobníky neměly být mapovány jako <code>man_made</code>
-  spíše než <code>building</code>.</li>
- 	<li id="wn305_12024">Uživatel Brogo <a
-  href="http://forum.openstreetmap.org/viewtopic.php?id=54660">by rád
-  zrušil</a> tag <code>access=no</code> protože je často používán špatným
-  způsobem.</li>
- 	<li id="wn305_11998">Christoph <a
-  href="http://blog.imagico.de/improbable-places/">rozšířil</a> své služby
-  poskytováním satelitních snímků pro OSM mapování v regionech, které
-  nenabízí většina ostatních služeb.</li>
+ 	<li id="wn305_12059">Adrien z Francouzské Guyana <a href="https://twitter.com/adrienandrem/status/722483348506034179">zmiňuje</a>, jak využít satelitní fotografie SENTINEL1 s pomocí RADAR a GDAL pro editace v JOSM.</li>
+ 	<li id="wn305_12057">Jak mohou noví mappeři pomoci HOT týmu s validací? Přečtěte <a href="http://www.openstreetmap.org/user/bgirardot/diary/36235">si více</a>.</li>
+ 	<li id="wn305_12050">Robert Whittaker <a href="http://robert.mathmos.net/osm/defib/progress/">vizualizoval</a> postup mapování defibrilátorů ve Velké Británii.</li>
+ 	<li id="wn305_12028">V sérii blogových zápisků Mapzenu na téma cílené mapování se Indy Hurts zaměřuje tentokrát na <a href="https://mapzen.com/blog/targeted-editing-cycleways/">mapování cyklostezek</a>.</li>
+ 	<li id="wn305_12043">Joachim <a href="https://lists.openstreetmap.org/pipermail/tagging/2016-May/029231.html">navrhuje </a>nový prefix <code>scheduled:</code> pro objekty, které jsou již naplánovány ale nezačala ještě jejich stavba.</li>
+ 	<li id="wn305_12011">Marc Gemins <a href="https://lists.openstreetmap.org/pipermail/tagging/2016-May/029245.html">se ptá</a> zda by průmyslové zásobníky neměly být mapovány jako <code>man_made</code>
+spíše než <code>building</code>.</li>
+ 	<li id="wn305_12024">Uživatel Brogo <a href="http://forum.openstreetmap.org/viewtopic.php?id=54660">by rád zrušil</a> tag <code>access=no</code> protože je často používán špatným způsobem.</li>
+ 	<li id="wn305_11998">Christoph <a href="http://blog.imagico.de/improbable-places/">rozšířil</a> své služby poskytováním satelitních snímků pro OSM mapování v regionech, které nenabízí většina ostatních služeb.</li>
 </ul>
 <h2 id="wn305_community">Komunita</h2>
 <ul>
- 	<li id="wn305_12001"><a
-  href="http://www.openstreetmap.org/user/BushmanK/diary/38639">Přečtete
-  si</a> v blogu BushmanK: "Proč je kopírování vizuálního stylu papírových
-  map špatný nápad".</li>
- 	<li id="wn305_12044"><a
-  href="http://www.imagico.de/person_en.php">Christoph Hormann</a>,
-  vlastník projektu <a href="http://services.imagico.de/">imagico.de</a>,
-  se na svém blogu <a
-  href="http://blog.imagico.de/more-on-clouds/">rozepsal</a> o problematice
-  mraků na satelitních fotkách. Odkazuje také na <a
-  href="https://medium.com/planet-stories/one-of-the-worlds-largest-reservoirs-lies-hidden-in-the-mountainous-center-of-borneo-1300215f26bf#.uyei709h4">blog
-  post od Roba Símmona</a> z Planet Labs.</li>
- 	<li id="wn305_12058">Mnoho přispěvatelů z latinské Ameriky <a
-  href="https://lists.openstreetmap.org/pipermail/talk-latam/2016-May/000495.html">se
-  zajímá</a> o možnost zjistit více o importním projektu Navicat z Mexika.
-  Rádi by zjistili, jak by jeho zkušenosti mohli využít pro své země ke
-  zlepšení OSM.Na toto téma se bude konat videokonference. Hlasování o
-  termínu <a href="http://doodle.com/poll/rbvysqume5eczg42">běží</a> do 26.
-  května.</li>
- 	<li id="wn305_12016">Brian Hollinshead <a
-  href="https://www.youtube.com/watch?v=7pxfnD4aQTg">přednášel</a> pro
-  Offaly Historical &amp; Archaeological Society o OpenStreetMap obecně a o
-  historickém mapování pro všechny.</li>
- 	<li id="wn305_12023">Blog OpenCageData <a
-  href="http://blog.opencagedata.com/post/144645475193/country-profile-openstreetmap-in-belgium">nabízí
-  rozhovor</a> s belgickými mappery.</li>
- 	<li id="wn305_12029">Projekt Pascala Neise HDYC <a
-  href="http://neis-one.org/2016/05/verified-osm-contributors/">dostal</a>
-  novou vlastnost. Umí teď zobrazit <em>účty uživatele na jiných
-  přidružených službách</em> a jestli je
-  mapper počítán mezi verifikované (například pro uživatele <a href="http://hdyc.neis-one.org/?malenki">malenki</a>).</li>
- 	<li id="wn305_12051">ANSA <a
-  href="http://www.ansa.it/sito/notizie/tecnologia/internet_social/2016/05/21/cresce-openstreetmap-mappe-libere_bca259d2-fa6c-4339-9416-150f0cda5bc9.html">informuje</a>
-  o růstu a velikosti projektu OpenStreetMap. (automatický <a
-  href="https://translate.google.cz/translate?sl=auto&tl=cs&js=y&prev=_t&hl=cs&ie=UTF-8&u=http%3A%2F%2Fwww.ansa.it%2Fsito%2Fnotizie%2Ftecnologia%2Finternet_social%2F2016%2F05%2F21%2Fcresce-openstreetmap-mappe-libere_bca259d2-fa6c-4339-9416-150f0cda5bc9.html&edit-text=">překlad</a>)</li>
+ 	<li id="wn305_12001"><a href="http://www.openstreetmap.org/user/BushmanK/diary/38639">Přečtete si</a> v blogu BushmanK: "Proč je kopírování vizuálního stylu papírových map špatný nápad".</li>
+ 	<li id="wn305_12044"><a href="http://www.imagico.de/person_en.php">Christoph Hormann</a>, vlastník projektu <a href="http://services.imagico.de/">imagico.de</a>, se na svém blogu <a href="http://blog.imagico.de/more-on-clouds/">rozepsal</a> o problematice
+mraků na satelitních fotkách. Odkazuje také na <a href="https://medium.com/planet-stories/one-of-the-worlds-largest-reservoirs-lies-hidden-in-the-mountainous-center-of-borneo-1300215f26bf#.uyei709h4">blog post od Roba Símmona</a> z Planet Labs.</li>
+ 	<li id="wn305_12058">Mnoho přispěvatelů z latinské Ameriky <a href="https://lists.openstreetmap.org/pipermail/talk-latam/2016-May/000495.html">se zajímá</a> o možnost zjistit více o importním projektu Navicat z Mexika. Rádi by zjistili, jak by jeho zkušenosti mohli využít pro své země ke
+zlepšení OSM.Na toto téma se bude konat videokonference. Hlasování o termínu <a href="http://doodle.com/poll/rbvysqume5eczg42">běží</a> do 26.
+května.</li>
+ 	<li id="wn305_12016">Brian Hollinshead <a href="https://www.youtube.com/watch?v=7pxfnD4aQTg">přednášel</a> pro Offaly Historical &amp; Archaeological Society o OpenStreetMap obecně a o historickém mapování pro všechny.</li>
+ 	<li id="wn305_12023">Blog OpenCageData <a href="http://blog.opencagedata.com/post/144645475193/country-profile-openstreetmap-in-belgium">nabízí rozhovor</a> s belgickými mappery.</li>
+ 	<li id="wn305_12029">Projekt Pascala Neise HDYC <a href="http://neis-one.org/2016/05/verified-osm-contributors/">dostal </a>novou vlastnost. Umí teď zobrazit <em>účty uživatele na jiných
+přidružených službách</em> a jestli je mapper počítán mezi verifikované (například pro uživatele <a href="http://hdyc.neis-one.org/?malenki">malenki</a>).</li>
+ 	<li id="wn305_12051">ANSA <a href="http://www.ansa.it/sito/notizie/tecnologia/internet_social/2016/05/21/cresce-openstreetmap-mappe-libere_bca259d2-fa6c-4339-9416-150f0cda5bc9.html">informuje </a>o růstu a velikosti projektu OpenStreetMap. (automatický <a href="https://translate.google.cz/translate?sl=auto&amp;tl=cs&amp;js=y&amp;prev=_t&amp;hl=cs&amp;ie=UTF-8&amp;u=http%3A%2F%2Fwww.ansa.it%2Fsito%2Fnotizie%2Ftecnologia%2Finternet_social%2F2016%2F05%2F21%2Fcresce-openstreetmap-mappe-libere_bca259d2-fa6c-4339-9416-150f0cda5bc9.html&amp;edit-text=">překlad</a>)</li>
 </ul>
 <h2 id="wn305_imports">Importy</h2>
 <ul>
- 	<li id="wn305_12025">Brandon Liu plánuje <a
-  href="https://lists.openstreetmap.org/pipermail/talk-us/2016-May/016300.html">import
-  výšek budov</a> pro americké San Francisco. Data jsou odvozena z měření
-  LIDAR z roku 2011.</li>
+ 	<li id="wn305_12025">Brandon Liu plánuje <a href="https://lists.openstreetmap.org/pipermail/talk-us/2016-May/016300.html">import výšek budov</a> pro americké San Francisco. Data jsou odvozena z měření LIDAR z roku 2011.</li>
 </ul>
 <h2 id="wn305_openstreetmap_foundation">Nadace OpenStreetMap</h2>
 <ul>
- 	<li id="wn305_12035">Německá Wikipedia má článek o editoru JOSM od roku
-  2008, anglická od minulého týdne (21. května 2016). <a
-  href="https://lists.openstreetmap.org/pipermail/talk/2016-May/076013.html">Důležitost
-  tématu pro vlastní článek</a> byla hned první věc na řešení.</li>
+ 	<li id="wn305_12035">Německá Wikipedia má článek o editoru JOSM od roku 2008, anglická od minulého týdne (21. května 2016). <a href="https://lists.openstreetmap.org/pipermail/talk/2016-May/076013.html">Důležitost tématu pro vlastní článek</a> byla hned první věc na řešení.</li>
 </ul>
 <h2 id="wn305_humanitarian_osm">Humanitární OSM</h2>
 <ul>
- 	<li id="wn305_12014">Tým HOT <a
-  href="https://blog.openstreetmap.org/2016/05/18/attend-the-hot-summit-and-state-of-the-map/">oznámil</a>,
-  že Summit HOT 2016 se bude konat v Bruselu, jen jeden den před konferencí
-  State of the Map. <a
-  href="https://hotosm.org/updates/05.17.2016_hot_summit_2016_registration_open">Registrace</a>
-  pro summit je již otevřena.</li>
- 	<li id="wn305_12046">Srí Lanka <a
-  href="https://www.bing.com/images/search?q=sri%20lanka%20flooding%202016&amp;qs=n&amp;form=QBIR&amp;pq=sri%20lanka%20flooding%202016&amp;sc=0-0&amp;sp=-1&amp;sk=">byla
-  v posledních dnech</a> zasažena ničivými záplavami.
+ 	<li id="wn305_12014">Tým HOT <a href="https://blog.openstreetmap.org/2016/05/18/attend-the-hot-summit-and-state-of-the-map/">oznámil</a>, že Summit HOT 2016 se bude konat v Bruselu, jen jeden den před konferencí
+State of the Map. <a href="https://hotosm.org/updates/05.17.2016_hot_summit_2016_registration_open">Registrace </a>pro summit je již otevřena.</li>
+ 	<li id="wn305_12046">Srí Lanka <a href="https://www.bing.com/images/search?q=sri%20lanka%20flooding%202016&amp;qs=n&amp;form=QBIR&amp;pq=sri%20lanka%20flooding%202016&amp;sc=0-0&amp;sp=-1&amp;sk=">byla v posledních dnech</a> zasažena ničivými záplavami.
 <ul>
- 	<li>zde <a href="http://tasks.hotosm.org/">najdete všechny úkoly</a> HOT,
-  prosíme pomozte!</li>
- 	<li>speciální pozornost si zaslouží <a
-  href="http://tasks.hotosm.org/project/1915">úkol 1915</a>.</li>
+ 	<li>zde <a href="http://tasks.hotosm.org/">najdete všechny úkoly</a> HOT, prosíme pomozte!</li>
+ 	<li>speciální pozornost si zaslouží <a href="http://tasks.hotosm.org/project/1915">úkol 1915</a>.</li>
 </ul>
 </li>
- 	<li id="wn305_12036">Vtipné postřehy od doktora <a
-  href="http://www.msf.org/">Lékařů bez hranic</a> ohledně vakcinační
-  kampaně v Demokratické republice Kongo: "<a
-  href="https://twitter.com/TheMissingMaps/status/734008801280548865">Mapy
-  byly půlka vítězství</a>".</li>
+ 	<li id="wn305_12036">Vtipné postřehy od doktora <a href="http://www.msf.org/">Lékařů bez hranic</a> ohledně vakcinační kampaně v Demokratické republice Kongo: "<a href="https://twitter.com/TheMissingMaps/status/734008801280548865">Mapy byly půlka vítězství</a>".</li>
 </ul>
 <h2 id="wn305_maps">Mapy</h2>
 <ul>
- 	<li id="wn305_12039">New Yorská rozhlasová stanice WNYC <a
-  href="https://www.timeout.com/usa/blog/interactive-map-of-median-household-incomes-across-the-u-s-confirms-your-suspicions-041816">vytvořila</a>
-  interaktivní <a
-  href="http://project.wnyc.org/median-income-nation/#10/40.7252/-73.9427">mapu
-  postavenou na OSM</a> reprezentující příjmy domácností v USA (základem je Census 2012).</li>
- 	<li id="wn305_12019">Nicki Dlugash <a
-  href="https://www.mapbox.com/blog/mapbox-outdoors-redesign-launch/">popisuje</a>
-  new mapový styl pro outdoor pro mapy od Mapboxu.</li>
+ 	<li id="wn305_12039">New Yorská rozhlasová stanice WNYC <a href="https://www.timeout.com/usa/blog/interactive-map-of-median-household-incomes-across-the-u-s-confirms-your-suspicions-041816">vytvořila </a>interaktivní <a href="http://project.wnyc.org/median-income-nation/#10/40.7252/-73.9427">mapu postavenou na OSM</a> reprezentující příjmy domácností v USA (základem je Census 2012).</li>
+ 	<li id="wn305_12019">Nicki Dlugash <a href="https://www.mapbox.com/blog/mapbox-outdoors-redesign-launch/">popisuje</a> new mapový styl pro outdoor pro mapy od Mapboxu.</li>
 </ul>
 <h2 id="wn305_switch2osm">Přechod k OSM</h2>
 <ul>
- 	<li id="wn305_12022">xero.bike bude pro své služby <a
-  href="https://medium.com/@xero.bike/why-xero-is-going-the-osm-way-c37d8bbc4f7">
-  používat</a> mapy (poskytované Mapboxem) založené na OSM.</li>
+ 	<li id="wn305_12022">xero.bike bude pro své služby <a href="https://medium.com/@xero.bike/why-xero-is-going-the-osm-way-c37d8bbc4f7">používat</a> mapy (poskytované Mapboxem) založené na OSM.</li>
 </ul>
 <h2 id="wn305_open_data">Otevřená data</h2>
 <ul>
- 	<li id="wn305_12015">Import hranic v Mexiku (viz <a
-  href="http://www.weeklyosm.eu/cs/archives/7523">předchozí info</a> ve
-  weeklyOSM #304) je vysoce <a
-  href="https://lists.openstreetmap.org/pipermail/osmf-talk/2016-May/003831.html">oceňován</a>
-  mexickým prezidentem během OS konference. <a
-  href="https://youtu.be/7EtkQS3A420?t=4113">Podívejte se</a> na video v
-  čase 1:08:35 až 1:11:17.</li>
+ 	<li id="wn305_12015">Import hranic v Mexiku (viz <a href="http://www.weeklyosm.eu/cs/archives/7523">předchozí info</a> ve weeklyOSM #304) je vysoce <a href="https://lists.openstreetmap.org/pipermail/osmf-talk/2016-May/003831.html">oceňován</a>
+mexickým prezidentem během OS konference. <a href="https://youtu.be/7EtkQS3A420?t=4113">Podívejte se</a> na video v čase 1:08:35 až 1:11:17.</li>
 </ul>
 <h2 id="wn305_software">Software</h2>
 <ul>
- 	<li id="wn305_12030">Aplikace pro vozíčkáře <a
-  href="http://www.wheelscout.org/">WheelScout</a> postavená na OSM má nové
-  vlastnosti: <a
-  href="http://www.biermann-medizin.de/fachbereiche/orthopaedie/vermischtes/leichter-navigieren-rollstuhlfahrer-app">indoor
-  navigaci</a> a <a href="https://idw-online.de/de/news651215">ovládání
-  hlasem</a>.</li>
- 	<li id="wn305_12061">Po téměř sedmi letech provozu bude 
-  <a href="http://us13.campaign-archive1.com/?u=dccc4e83a77fd9c6ddcf5a9bc&amp;id=cc0ed3df06&amp;e=b08bd4f126">dle
-  oznámení vývojářu</a> 24. května ukončen projekt OpenStreetView.org.
-  Pokud budou uživatelé souhlasit, budou data (fotky) přeneseny do nového projektu Steva Coasta a Telenavu, na
-  kterém se právě pracuje.</li>
- 	<li id="wn305_12037">Na webu androidheadlines.com je k dispozici <a
-  href="http://www.androidheadlines.com/2016/05/sponsored-app-review-maps-navigation-osmand.html">ilustrovaná
-  recenze</a> androidí aplikace OsmAnd.</li>
+ 	<li id="wn305_12030">Aplikace pro vozíčkáře <a href="http://www.wheelscout.org/">WheelScout</a> postavená na OSM má nové vlastnosti: <a href="http://www.biermann-medizin.de/fachbereiche/orthopaedie/vermischtes/leichter-navigieren-rollstuhlfahrer-app">indoor
+navigaci</a> a <a href="https://idw-online.de/de/news651215">ovládání hlasem</a>.</li>
+ 	<li id="wn305_12061">Po téměř sedmi letech provozu bude <a href="http://us13.campaign-archive1.com/?u=dccc4e83a77fd9c6ddcf5a9bc&amp;id=cc0ed3df06&amp;e=b08bd4f126">dle oznámení vývojářů</a> 24. května ukončen projekt OpenStreetView.org. Pokud budou uživatelé souhlasit, budou data (fotky) přeneseny do nového projektu Steva Coasta a Telenavu, na kterém se právě pracuje.</li>
+ 	<li id="wn305_12037">Na webu androidheadlines.com je k dispozici <a href="http://www.androidheadlines.com/2016/05/sponsored-app-review-maps-navigation-osmand.html">ilustrovaná recenze</a> androidí aplikace OsmAnd.</li>
 </ul>
 <h2 id="wn305_programming">Programování</h2>
 <ul>
- 	<li id="wn305_12052">Uživatel mmd <a
-  href="http://permalink.gmane.org/gmane.comp.gis.openstreetmap.overpass/265">dosáhl</a>
-  skvělých výsledků s laděním rychlosti importu pro Overpass-API, především
-  změnou knihovny zlib za lz4. Celá databáze může být naimportována za <a
-  href="https://wiki.openstreetmap.org/wiki/User:Mmd/Overpass_API/Performance_Project_2016/Full_Attic_DB_Setup">méně
-  než 4 dny</a>.</li>
- 	<li id="wn305_12007">Uživatel Chris vydal alfa verzi svého software <a
-  href="https://sourceforge.net/p/offroadosm/wiki/Home/">OffRoad</a>, což
-  je port projektu Osmand na desktop. <a
-  href="https://groups.google.com/forum/#!topic/osmand/8tFZf9WDvsY">Žádá</a>
-  o zpětnou vazbu.</li>
+ 	<li id="wn305_12052">Uživatel mmd <a href="http://permalink.gmane.org/gmane.comp.gis.openstreetmap.overpass/265">dosáhl </a>skvělých výsledků s laděním rychlosti importu pro Overpass-API, především změnou knihovny zlib za lz4. Celá databáze může být naimportována za <a href="https://wiki.openstreetmap.org/wiki/User:Mmd/Overpass_API/Performance_Project_2016/Full_Attic_DB_Setup">méně
+než 4 dny</a>.</li>
+ 	<li id="wn305_12007">Uživatel Chris vydal alfa verzi svého software <a href="https://sourceforge.net/p/offroadosm/wiki/Home/">OffRoad</a>, což je port projektu Osmand na desktop. <a href="https://groups.google.com/forum/#!topic/osmand/8tFZf9WDvsY">Žádá</a> o zpětnou vazbu.</li>
 </ul>
 <h2 id="wn305_releases">Nová vydání</h2>
 <table>
@@ -349,7 +258,7 @@ xxx
 <td><a href="https://wiki.openstreetmap.org/wiki/Cruiser">Cruiser for Desktop</a></td>
 <td><a href="-">1.2.5</a></td>
 <td>05.19.2016</td>
-<td>pčejmenováno z Atlas</td>
+<td>přejmenováno z Atlas</td>
 </tr>
 <tr>
 <td><a href="http://www.qgis.org">QGIS</a></td>
@@ -368,36 +277,19 @@ xxx
 poskytuje <a href="https://osm.wno-edv-service.de/index.php/osm-software">OSM Software Watchlist</a>
 <h2 id="wn305_did_you_know_…">Vědeli jste ...</h2>
 <ul>
- 	<li id="wn305_12020">... o <a href="http://wiki.openstreetmap.org/w/images/9/99/JOSM_Keyboard_shortcuts_cheat_sheet.png">tabulce zkratek</a>(cheat sheet) pro JOSM?</li>
+ 	<li id="wn305_12020">... o <a href="http://wiki.openstreetmap.org/w/images/9/99/JOSM_Keyboard_shortcuts_cheat_sheet.png">tabulce zkratek </a>(cheat sheet) pro JOSM?</li>
  	<li id="wn305_12031">... o slovenské <a href="http://www.freemap.sk/#p=49.05799%7C16.8003%7C10%7CT,u=m">Freemap</a>?</li>
- 	<li id="wn305_12034">... o téměř perfektně <a
-  href="http://opengeofiction.net/#map=13/20.7176/86.6963">zmapovaném</a> Cobras City?</li>
+ 	<li id="wn305_12034">... o téměř perfektně <a href="http://opengeofiction.net/#map=13/20.7176/86.6963">zmapovaném</a> Cobras City?</li>
 </ul>
 <h2 id="wn305_other_“geo”_things">Ostatní "geo" záležitosti</h2>
 <ul>
- 	<li id="wn305_12033">BBC <a
-  href="http://www.bbc.com/news/science-environment-36214261">informuje</a>
-  o dvouletém projektu "PROTection of European Cultural Heritage from
-  GeO-hazards" (<a href="http://www.prothego.eu/home.html">PROTHEGO</a>) -
-  financovaném Evropskou komisí - zaměřeném na zjištění pohybů podloží v
-  oblasti evropských Světových památek UNESCO s využitím <a
-  href="https://en.wikipedia.org/wiki/Interferometric_synthetic_aperture_radar">radarové
-  interferometrie</a>.</li>
- 	<li id="wn305_12049">GeoHipster <a
-  href="http://geohipster.com/2016/05/23/achim-tack-patrick-stotz-nonsensical-things-mapped-just-sake-mapping/">nabízí
-  rozhovor</a> s Achimem a Patrickem, kteří pracují pro SPON o jejich práci
-  datových novinářů.</li>
- 	<li id="wn305_12027">Apple <a
-  href="http://www.macrumors.com/2016/05/19/apple-hyderabad-maps-development/">otevřel</a>
-  pobočku v Indii se zaměřením na tvorbu map se 4000 zaměstnanci.</li>
- 	<li id="wn305_12045">INRIX <a
-  href="http://www.autoconnectedcar.com/2016/05/inrix-parking-payments-with-parkmobile-partnership/">plánuje
-  nabízet</a> ve spolupráci s <a
-  href="http://us.parkmobile.com/">US.Parkmobile</a> služby pro parkování.
-  Systém je postaven na datech OSM.</li>
- 	<li id="wn305_12053">Školení "Kartografie v OpenStreetMap" <a
-  href="http://www.rivistageomedia.it/201605039489/formazione/cartografo-per-openstreetmap-formazione-per-ong-e-non-solo">se
-  koná</a> 08. - 09.června v italském Římě.</li>
+ 	<li id="wn305_12033">BBC <a href="http://www.bbc.com/news/science-environment-36214261">informuje </a>o dvouletém projektu "PROTection of European Cultural Heritage from
+GeO-hazards" (<a href="http://www.prothego.eu/home.html">PROTHEGO</a>) - financovaném Evropskou komisí - zaměřeném na zjištění pohybů podloží v oblasti evropských Světových památek UNESCO s využitím <a href="https://en.wikipedia.org/wiki/Interferometric_synthetic_aperture_radar">radarové interferometrie</a>.</li>
+ 	<li id="wn305_12049">GeoHipster <a href="http://geohipster.com/2016/05/23/achim-tack-patrick-stotz-nonsensical-things-mapped-just-sake-mapping/">nabízí rozhovor</a> s Achimem a Patrickem, kteří pracují pro SPON o jejich práci
+datových novinářů.</li>
+ 	<li id="wn305_12027">Apple <a href="http://www.macrumors.com/2016/05/19/apple-hyderabad-maps-development/">otevřel</a> pobočku v Indii se zaměřením na tvorbu map se 4000 zaměstnanci.</li>
+ 	<li id="wn305_12045">INRIX <a href="http://www.autoconnectedcar.com/2016/05/inrix-parking-payments-with-parkmobile-partnership/">plánuje nabízet</a> ve spolupráci s <a href="http://us.parkmobile.com/">US.Parkmobile</a> služby pro parkování. Systém je postaven na datech OSM.</li>
+ 	<li id="wn305_12053">Školení "Kartografie v OpenStreetMap" <a href="http://www.rivistageomedia.it/201605039489/formazione/cartografo-per-openstreetmap-formazione-per-ong-e-non-solo">se koná</a> 08. - 09.června v italském Římě.</li>
 </ul>
 <h2 id="wn305_upcoming_events">Plánované události</h2>
 <table>
@@ -467,7 +359,7 @@ poskytuje <a href="https://osm.wno-edv-service.de/index.php/osm-software">OSM So
 <tr>
 <td>Besenello Trentino</td>
 <td><a href="http://www.portobeseno.it/">Portobeseno</a> : několik přednášek o OpenStreetMap</td>
-<td>10.06.  - 12.06.2016</td>
+<td>10.06. - 12.06.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/02/it.svg" alt="italy" /></td>
 </tr>
 </tbody>
@@ -486,73 +378,71 @@ poskytuje <a href="https://osm.wno-edv-service.de/index.php/osm-software">OSM So
 <tr>
 <td>Salzburg</td>
 <td><a href="https://wiki.openstreetmap.org/wiki/FOSSGIS%202016">FOSSGIS 2016</a></td>
-<td>04.07.  - 06.07.2016</td>
+<td>04.07. - 06.07.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/02/at.svg" alt="austria" /></td>
 </tr>
 <tr>
 <td>Salzburg</td>
 <td><a href="https://wiki.openstreetmap.org/wiki/AGIT%202016">AGIT 2016</a></td>
-<td>06.07.  - 08.07.2016</td>
+<td>06.07. - 08.07.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/02/at.svg" alt="austria" /></td>
 </tr>
 <tr>
 <td>Seattle</td>
 <td><a href="http://stateofthemap.us/">State of The Map US 2016</a></td>
-<td>23.07.  - 25.07.2016</td>
+<td>23.07. - 25.07.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/01/us.svg" alt="united states" /></td>
 </tr>
 <tr>
 <td>Bonn</td>
 <td><a href="//wiki.osgeo.org/wiki/FOSS4G_2016_Code_Sprint">FOSS4G 2016 Code Sprint</a></td>
-<td>20.08.  - 22.08.2016</td>
+<td>20.08. - 22.08.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/01/de.svg" alt="germany" /></td>
 </tr>
 <tr>
 <td>Bonn</td>
 <td><a href="http://2016.foss4g.org/">Workshops at FOSS4G 2016</a></td>
-<td>22.08.  - 23.08.2016</td>
+<td>22.08. - 23.08.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/01/de.svg" alt="germany" /></td>
 </tr>
 <tr>
 <td>Bonn</td>
 <td><a href="http://2016.foss4g.org/">FOSS4G 2016</a></td>
-<td>24.08.  - 26.08.2016</td>
+<td>24.08. - 26.08.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/01/de.svg" alt="germany" /></td>
 </tr>
 <tr>
 <td>Bonn</td>
 <td><a href="//wiki.osgeo.org/wiki/FOSS4G_2016_Code_Sprint">FOSS4G 2016 Code Sprint Part II</a></td>
-<td>27.08.  - 28.08.2016</td>
+<td>27.08. - 28.08.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/01/de.svg" alt="germany" /></td>
 </tr>
 <tr>
 <td>Brusel</td>
 <td><a href="http://2016.stateofthemap.org/">State of the Map 2016</a></td>
-<td>23.09.  - 26.09.2016</td>
+<td>23.09. - 26.09.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/05/be.svg" alt="belgium" /></td>
 </tr>
 <tr>
 <td>Metro Manila</td>
 <td><a href="https://sotmasia2016.splashthat.com/">State of the Map Asia</a></td>
-<td>01.10.  - 02.10.2016</td>
+<td>01.10. - 02.10.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/05/ph.svg" alt="philippines" /></td>
 </tr>
 <tr>
 <td>Berlín</td>
 <td><a href="https://wiki.openstreetmap.org/wiki/Berlin%20Hack%20Weekend%20October%202016">Hack Weekend</a></td>
-<td>15.10.  - 16.10.2016</td>
+<td>15.10. - 16.10.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/01/de.svg" alt="germany" /></td>
 </tr>
 <tr>
 <td>Karlsruhe</td>
 <td>Hack Weekend</td>
-<td>29.10.  - 30.10.2016</td>
+<td>29.10. - 30.10.2016</td>
 <td><img src="http://blog.openstreetmap.de/wp-uploads//2016/01/de.svg" alt="germany" /></td>
 </tr>
 </tbody>
 </table>
-&nbsp;
-
 <strong>Poznámka</strong>: Pokud zde chcete vidět vaši akci<span class="message_body">, <a href="https://wiki.openstreetmap.org/wiki/Template:Calendar">zadejte ji</a> prosím do kalendáře. Pouze data z kalendáře se objeví v našem týdeníku.</span><span class="message_body"> V <a href="https://wiki.openstreetmap.org/wiki/Current_events">kalendáři</a> prosím nezapomeňte zmínit město a zemi. A pro vložení kategorie použijte prosím [edit blog detail].</span>
 <div style="background-color: #dddddd; padding: 10px;">
 
@@ -560,7 +450,5 @@ poskytuje <a href="https://osm.wno-edv-service.de/index.php/osm-software">OSM So
 
 </div>
 <div style="background-color: #dddddd; padding: 10px;"><span style="color: #333333;">Můžete nás kontaktovat e-mailem: <strong><a style="color: #333333;" href="mailto:weekly@openstreetmap.cz"><img src="http://kasparkovi.net/osm/weekly.php?img=Mail" alt="e-mail" /> <span style="text-decoration: underline;">weekly@openstreetmap.cz</span></a></strong></span></div>
-<div style="text-align: right;"><i>Originál tohoto souhrnu <a href="https://wiki.openstreetmap.org/wiki/WeeklyOSM#Languages">připravili</a>:</i><i>
-Hakuch, Laura Barroso, Peda, Rogehm, derFred, jinalfoflia, malenki,
+<div style="text-align: left;"><i>Originál tohoto souhrnu <a href="https://wiki.openstreetmap.org/wiki/WeeklyOSM#Languages">připravili</a>:</i><i> Hakuch, Laura Barroso, Peda, Rogehm, derFred, jinalfoflia, malenki,
 mgehling, muramototomoya, stephan75, wambacher.</i></div>
-
