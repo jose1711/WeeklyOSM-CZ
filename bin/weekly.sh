@@ -22,7 +22,7 @@ sedfile 's/>About us</>O nás</;
          s/>Open Data</>Otevřená data</;
          s/>Programming</>Programování</;
          s/>Releases</>Nová vydání</;
-         s/>Did you know .</>Vědeli jste ...</;
+         s/>Did you know .</>Věděli jste ...</;
          s/>Other .geo. things</>Ostatní "geo" záležitosti</;
          s/>Events</>Události</;
          s/>Upcoming Events</>Plánované události</;
