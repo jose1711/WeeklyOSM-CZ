@@ -15,6 +15,7 @@ sedfile 's/>About us</>O nás</;
          s/>Mapping</>Mapování</;
          s/>Community</>Komunita</;
          s/>Imports</>Importy</;
+         s/>Licenses</>Licence</;
          s/>OpenStreetMap Foundation</>Nadace OpenStreetMap</;
          s/>Humanitarian OSM</>Humanitární OSM</;
          s/>Maps</>Mapy</;
@@ -26,7 +27,7 @@ sedfile 's/>About us</>O nás</;
          s/>Other .geo. things</>Ostatní "geo" záležitosti</;
          s/>Events</>Události</;
          s/>Upcoming Events</>Plánované události</;
-         s/>Long term dates</>Pozdější důležité akce</;
+         s/>Long [tT]erm [dD]ates</>Pozdější důležité akce</;
          
          s/th>Software</th>software</;
          s/>Version</>verze</;
@@ -39,6 +40,7 @@ sedfile 's/>About us</>O nás</;
          s/>Country</>země</;
          
          s/>‘’’/>/g;
+         s/>\'\'\'/>/g;
 
          s/provided by the /Poskytuje /;
         ' $1.html
