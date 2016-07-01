@@ -11,7 +11,7 @@ cat header.html $IN footer.html >$1.html
 
 cp $1.html $1-orig.html
 
-sedfile 's/>About us</>O nás</;
+sedfile "s/>About us</>O nás</;
          s/>Mapping</>Mapování</;
          s/>Community</>Komunita</;
          s/>Imports</>Importy</;
@@ -43,6 +43,6 @@ sedfile 's/>About us</>O nás</;
          s/>\'\'\'/>/g;
 
          s/[pP]rovided by the /Poskytuje /;
-        ' $1.html
+        " $1.html
 
 vim $1.html
