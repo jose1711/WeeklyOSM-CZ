@@ -16,6 +16,7 @@ sedfile "s/>About us</>O nás</;
          s/>Community</>Komunita</;
          s/>Imports</>Importy</;
          s/>Licenses</>Licence</;
+         s/>Licences</>Licence</;
          s/>OpenStreetMap Foundation</>Nadace OpenStreetMap</;
          s/>Humanitarian OSM</>Humanitární OSM</;
          s/>Maps</>Mapy</;
