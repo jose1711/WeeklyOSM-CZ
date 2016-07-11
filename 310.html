@@ -124,8 +124,61 @@ a {
 <p class="wp-caption-text"><img src="http://www.weeklyosm.eu/wp-content/uploads/2016/06/310_WN_EN.png" alt="Logo" /> Mapa anglického Brexhillu; fork projektu <a href="http://upoi.org/#13/-27.4543/-59.0180">upoi.org</a> <a href="#12299"><sup>1</sup></a> | © <a href="http://www.openstreetmap.org/copyright">přispěvatelé OpenStreetMap</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA 2.0</a></p>
 </div>
 
-<h2 >Téma:</h2>
-xxx
+<h2 >Téma: Nevyužité fotky rozcestníků</h2>
+
+<p>
+Na portálu <a href="https://openstreetmap.cz">openstreetmap.cz</a> máme už nějakou dobu možnost si zobrazit fotky rozcestníků v OSM, podívat se, kde u rozcestníku fotka chybí a po nafocení ji tam nahrát. Existující fotky si zobrazíte zapnutím vrstvy "Foto rozcestníků", chybějící fotky a jiné detekované problémy rozcestníků pak pomocí vrstvy "Chybné rozcestníky". Za poslední dobu prodělaly tyhle funkce určitý vývoj, pojďme si tedy shrnout, co to všechno umí a na co by bylo dobré se při mapování a focení zaměřit.
+Jen pro začátek ještě připomenu, že portál se aktuálně stále potýká s problémem mixování obsahu přes šifrované spojení a nešifrované, postupně se pracuje na řešeních (viz český mail list).
+</p>
+
+<strong>Fotky rozcestníků</strong>
+<p>
+Tato vrstva zobrazí na mapě všechny nafocené rozcestníky. Těch je v databázi aktuálně přes 8000, takže se provádí shlukování do skupin. Pro zobrazení konkrétního rozcestníku je tak třeba mapu dost přiblížit. Na mapě najdete tři druhy ikonek. Modrý kulatý symbol značí fotku z wikimedie (třeba <a href="https://openstreetmap.cz/#map=17/49.18806/16.57748&layers=G">tento</a> poněkud vtipný rozcestník na Brněnském výstavišti). Ikona tabule nově značí informační panel (třeba naučné stezky). Touto ikonou se označí obrázek, který má vyplněn v editoru tag <code>infotabule</code>. Kontrolu nebo doplnění tagu provedete po kliknutí na položku "upravit" s ikonou tužky na bublině s detailními informacemi o daném bodu (ta se objeví po kliknutí na ikonu na mapě). Otevře se tak <a href="https://api.openstreetmap.cz/table/id/5355">editor fotografií</a>, který toho umí více. Základem je přidání (nebo odebrání ikonou křížku) tagů pro danou fotku. Pro doplnění tagu klikněte na řádek za existující tagy a začněte psát. Objeví se našeptávač s nejčastěji používanými hodnotami. Jako v OSM, nemá moc smysl dávat vlastní, nerozšířené hodnoty tagů. Z těch nejdůležitějších zmiňme alespoň:
+</p>
+<ul>
+<li><code>infotabule</code> - informační tabule, naučná stezka nebo jiná cedule s vysvětlujícím textem k blízkému objektu.
+</li>
+<li><code>cyklo</code> - cyklo značení, rozcestník, ukazatel apod. Říká, že je fotka užitečná pro mapování cyklo věcí.
+</li>
+<li><code>lyžařská</code> - rozcestníky lyžařských (nejčastěji běžkařských) tras.
+</li>
+<li><code>konská</code> - koňské trasy a jejich rozcestníky a značení.
+</li>
+<li><code>zastávka</code> - zastávka MHD nebo jiné veřejné dopravy. Je vhodné aby byl čitelný název ideálně i nějaké označení (čísla) linek.
+</li>
+<li><code>rozcestník</code> - turistický rozcestník, nejčastější objekt na fotkách.
+</li>
+<li><code>mapa</code> - cedule s mapou nebo fotomapou, případně cedule kde je mapa nebo plánek/schéma dominantní prvek.
+</li>
+<li><code>rozmazané</code> - fotka je rozmazaná a je vhodné ji tedy nafotit znovu
+</li>
+<li><code>nečitelné</code> - fotka je ostrá, ale údaje jsou nečitelné (rozcestník focen příliš z dálky apod.)
+</li>
+<li><code>značení</code> - pásové značení turistických nebo jiných tras (lyžařské, cyklo, koňské...)
+</li>
+</ul>
+
+<p>
+Když tedy fotku nafotíte a nahrajete do databáze, zkuste si ještě najít chvíli a správně ji otagovat, hodnota záznamu se tím výrazně zvýší. Kromě tagů je u rozcestníků ještě vhodné vyplnit parametr <code>ref</code>, pokud tak nebylo učiněno při nahrávání.
+</p>
+
+<strong>Chybné rozcestníky</strong>
+<p>
+Vrstva s chybnými rozcestníky je v první řadě místo kde se můžete inspirovat, kam vyrazit za mapováním. No a po návratu ze nejjednodušeji nahrajete své nové fotky do databáze. Po kliknutí na ikonu rozcestníku se škrtnutým foťákem (chybějící fotka) se otevře bublina s informacemi o stavu a detekovaných chybách. Nahoře je velké modré tlačítko "vložit fotografii". Dole je pak možné problém vyřešit editací v některém OSM editoru (iD nebo vzdálené ovládání JOSM/Merkaator). Pro vložení nové fotky potřebujete kromě zvolení souboru z disku určit, jestli se do databáze vloží jako pozice údaj z EXIF (tj. GPS souřadnice z fotky vložené tam nejčastěji přímo foťákem), nebo se použijí souřadnice OSM uzlu, který jste vybrali. EXIF je obecně lepší varianta, určuje reálnou polohu fotky a je tak možné detekovat chybně umístěný rozcestník. Povinný údaj je autor - ideální je použít váš OSM login, ať se pak dají data párovat, ale není to nutné. U rozcestníků je také velmi vhodné vyplnit identifikaci rozcestníku do pole <code>ref</code>.
+</p>
+
+<p>
+Nezapomeňte i na možnost <a href="http://osm.fit.vutbr.cz/OsmHiCheck/gp/">stáhnout</a> všechny chybné rozcestníky ve formátu GPX například pro použití offline v programech jako Locus apod.
+</p>
+
+<strong>Nepoužité fotky</strong>
+<p>
+Původní důvod, proč jsem tento text začal psát. Když se podíváte na <a href="http://osm.fit.vutbr.cz/OsmHiCheck/gp/?img">tabulku nepoužitých fotek</a> generovanou na OsmHiCheck, zjistíte, že přes 800 fotek není možné automaticky přiřadit k nějakému rozcestníku. To znamená buď, že daný rozcestník v databázi OSM neexistuje a je potřeba ho úplně vytvořit, nebo je ještě druhá možnost - vaše fotka má souřadnice polohy dál než 20m od nejbližšího libovolného rozcestníků. V první případě je nutné otevřít editor a oblast doplnit o chybějící objekty mapy. V druhém stačí opravit polohu přesunutím rozcestníku. To by měl ale ideálně udělat autor fotky, neboť ten ví, jak to na místě vypadalo a kde rozcestníky reálně ležel. Z tabulky na OsmHiCheck se kliknutím na první sloupec dostanete na editor daného záznamu v databázi. Zde je možné doplnit nebo opravit již zmíněné údaje. Už to někdy stačí, aby kontrola poznala, že se jedná například o mapu nebo infotabuli. Pokud je na fotce rozcestník, nezbývá než ho posunout. Aktuálně je nejjednodušší způsob je kliknutím na ikonu existující fotky (viz. první popisovaná vrstva mapy) a zde je tlačítko "Přesunout". Po kliknutí je potřeba kliknout do mapy na novou pozici, objeví se modrá značka. Tu lze pak přesunout tažením myší na finální místo zpřesněním polohy. Pokud jste s umístěním spokojení, zakončíte přesun potvrzením "Přesunout sem" v levé liště.
+</p>
+
+<p>
+Na závěr je vhodné připomenout, že většina změn se neprojeví ihned, ale až poté, co je Michal Grézl během několika dní schválí. To je poněkud nepříjemné, ale aspoň to nutí udělat vše správně hned napoprvé :-).
+</p>
 
 <h2 >OSM CZ</h2>
 <ul>
