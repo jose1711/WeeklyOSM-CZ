@@ -32,7 +32,7 @@ sedfile "s/>About us</>O nás</;
          
          s/th>Software</th>software</;
          s/>Version</>verze</;
-         s/>Release Date</>datum vydání</;
+         s/>Release [Dd]ate</>datum vydání</;
          s/>Comment</>komentář</;
 
          s/>Where</>kde</;
@@ -41,7 +41,7 @@ sedfile "s/>About us</>O nás</;
          s/>Country</>země</;
          
          s/>‘’’/>/g;
-         s/>\'\'\'/>/g;
+         s/>'''/>/g;
 
          s/[pP]rovided by the /Poskytuje /;
         " $1.html
