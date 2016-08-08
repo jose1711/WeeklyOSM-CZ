@@ -117,15 +117,42 @@ a {
 
 <!-- START -->
 
-07.19. - 07.25.2016
+19.07. - 25.07.2016
 
 <!-- place picture here -->
 <div class="wp-caption alignnone" style="width: 650px;">
 <p class="wp-caption-text"><img src="http://blog.openstreetmap.de/wp-uploads//2016/07/highprecision_gps.jpg" alt="Logo" width="640" height="490" /> Grants GPS-Hochpräzisionsmessgerät im Eigenbau <a href="#wn314_12503"><sup>1</sup></a></p>
 &nbsp;
 
-<h2 >Téma:</h2>
-xxx
+<h2 >Téma: Aktivní vrstva na OpenStreetMap.cz</h2>
+
+  <p>
+<i>
+Připravili jsme pro Vás třídílný seriál, který se bude věnovat tématu mapového portálu OpenStreetMap.cz Součástí každého dílu je související video, které vzniklo během přednášek na SotM CZ/SK před prázdninami v Brně. Toto je druhý díl.
+</i>
+<p>
+
+<p>
+ Takzvanou aktivní vrstvu, tedy klikatelné ikony bodů zájmu na portálu OpenStreetMap.cz, lze jako mapovou funkci směle srovnat s kteroukoliv obdobnou vlastností největších komerčních map. Jejím autorem je Marián Kyral (#Mkyral), který postupně implementuje další požadavky uživatelů. Co stálo za jeho rozhodnutím tuto vrstvu naprogramovat, jaké má současné vlastnosti a jaké jsou cíle do budoucna můžete vidět na <a href="https://youtu.be/Y38VQtL9eqE">záznamu přednášky</a> z letošního SotM v Brně:
+</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y38VQtL9eqE?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<p>
+Co však standardně přináší prázdniny je přesun volno časových aktivit od programování k aktivnímu pohybu - to se týká i Mariána a tak vývoj kódu a plánovaných zlepšení v aktivní vrstvě nepostupuje prakticky vůbec. "Podílí se na tom i fakt, že mám zkušenosti s jinými jazyky, než je právě JavaScript, ve kterém se většina potřebných úprav tvoří. Rozhodně by moc pomohlo, pokud bychom měli v týmu alespoň jednoho zkušeného JavaScriptáře," doplňuje Marián. "Na GitHubu je nyní asi 70 issues, kterými je možné se ihned zabývat, zkušený programátor by většinu z nich zvládl celkem rychle."
+</p>
+
+<p>
+Mezi hlavní cíle kodérů portálu OpenStreetMap.cz je odstranění problémů s výkonem právě při zobrazování aktivní vrstvy. Tam, kde je velké množství POI, prohlížeč načítá a zpracovává značné množství informací a pohyb na mapě je velmi pomalý. Znát je to například v centru Prahy. Optimalizace kódu není nijak složitá, naráží opět na osobní kapacitní možnosti současných programátorů.
+</p>
+
+<p>
+Mezi další blízké cíle, které si sám Marián vytyčil, patří zvýšení počtu zobrazovaných fotek u POI. "Konkrétně mám na mysli turistické rozcestníky, ke kterým sbíráme ve velké míře fotografie. Už dnes je patrné, a v delším čase se nám bude stávat stále častěji, že budeme mít k jednomu bodu více fotografií. A nyní zobrazujeme jen jednu - aktuálně tu v systému nejstarší. Ale i kdybychom zobrazovali podle jiného kritéria, rozhodně nezobrazíme vždy tu nejlepší či nejvhodnější. Řešením je možnost dát uživateli vybrat, nabídnout mu více dostupných fotek. To ale v malém fyzickém prostoru pop-up okna znamená vymyslet netriviální řešení nějakého rolování, karuselu apod. A na to pak navazuje označování nevhodných fotek, nebo i naopak těch vhodných," popisuje Marián Kyral.
+</p>
+
+<p>
+I tento článek je stejně jako Téma z minulého vydání weekly současně i výzvou - výzvou pro kodéry bez rozdílu věku i zkušeností. Úpravy kódu jsou před nasazením na produkční web neveřejné a není se tedy třeba bát způsobených škod při jeho odlaďování. Zájemci o jakékoliv informace se mohou obrátit pro bližší informace na redakční web weekly [] openstreetmap.cz
+</p>
 
 <h2 >OSM CZ</h2>
 <ul>
