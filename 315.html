@@ -121,11 +121,40 @@ a {
 
 <!-- place picture here -->
 <div class="wp-caption alignnone" style="width: NaNpx;">
-<p class="wp-caption-text"><img src="http://www.weeklyosm.eu/wp-content/uploads/2016/08/315_en.png" alt="Logo" /> Route from Prince Rupert (CA) to San José (Costa Rica) via Washington (USA) with OpenRouteService <a href="#wn315_12572"><sup>1</sup></a> | OpenRouteService is going global - including the Americas</p>
+<p class="wp-caption-text"><img src="http://www.weeklyosm.eu/wp-content/uploads/2016/08/315_en.png" alt="Logo" /> Navigace z  kalifornského Prince Rupert do San José v Kostarice přes americký Washington s pomocí OpenRouteService <a href="#wn315_12572"><sup>1</sup></a> | OpenRouteService se stává globálním - včetně obou Amerik</p>
 </div>
 
-<h2 >Téma:</h2>
-xxx
+<h2 >Téma: Photo DB na OpenStreetMap.cz</h2>
+
+<i>
+Připravili jsme pro Vás třídílný seriál, který se bude věnovat tématu mapového portálu OpenStreetMap.cz Součástí každého dílu je související video, které vzniklo během přednášek na SotM CZ/SK před prázdninami v Brně. Toto je závěrečný díl.
+</i>
+
+<p>
+"Vždycky jsem chtěl vytvořit něco na zobrazování lokalizovaných fotek. A protože jsem měl nejvíce fotek rozcestníků, vznikl tak základ databáze rozcestníků," uvedl na letošním SotM CZ/SK v Brně svůj projekt <a href="https://openstreetmap.cz/databaze-fotografii-rozcestniku-a-poi">Photo DB</a> jeho autor Michal Grézl (#walley). Na záznamu z jeho přednášky můžete vidět a slyšet mnoho dalších zajímavých informací o vývoji a cílech projektu.
+</p>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EKbv17J3iVA?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<p>
+Pro mappery, kteří se věnují mapování rozcestníků, nebo je z jakéhokoliv jiného důvodu projekt Photo DB zajímá, má Michal dobrou zprávu - dopracoval do editačního rozhraní databáze autorizaci uživatele, která umožňuje změny v databázi v reálném čase. "Do současnosti editor umožňoval změny některých hodnot a ty se zařadily do fronty na schválení. Teprve až následně je bylo potřeba každou zkontrolovat a schválit a protože jsem to dělal sám, trvalo to velmi dlouho," přiblížil Michal. "Dnes už jsem implementoval přihlašování přes OpenID, lze se tedy přihlásit pomocí české služby MojeID. Současná přechodná verze umožňuje přihlášení komukoliv, ale editace jsou přijímány jen od vyjmenovaného okruhu osob, ostrá verze už toto omezení mít nebude. Její nasazení plánuji ještě dnes", doplnil autor. Přihlašování (autorizace) přes OpenStreetMap.org není podle něj až tak triviální a v plánu je, nikoliv však jako priorita.
+</p>
+
+<p>
+Webová aplikace <a href="http://api.openstreetmap.cz/webapps/editor.html">editoru</a> umožňuje editaci všechny parametrů záznamu v databázi, umístění fotek lze přesouvat přímo v mapovém portálu OpenStreetMap.cz (s pomocí vrstvy "Foto rozcestníků"). Editovat lze i tagy, pomocí nichž je možné třídit fotografie v různých kategoriích - databáze neobsahuje zdaleka jen fotky rozcestníků. V plánu je přepracování formy zjištění datumů, kdy byla fotka do databáze vložena a kdy byla pořízena (EXIF). Lepšímu načítání obsahu editoru i snímků na mapovém portálu pomůže dokončení funkcionality náhledu uložených snímků.
+</p>
+
+<p>
+Databáze je již nyní připravena na lepší spolupráci s aktivní vrstvou (viz předchozí Téma) a umožní po zavolání vystavení ne jedné, ale všech dostupných fotografií k danému kritériu - především k hodnotě ref=*, nebo i k vzdálenosti od daného POI (např. pro případ, že snímek nemá uvedenou hodnotu ref=*, ale je velmi blízko rozcestníku).
+</p>
+
+<p>
+"Čeká nás ještě jeden důležitý krok a tím je přidělení nějaké svobodné licence fotkám, které se do databáze vkládají, ale i těm, které v databázi již jsou," upozornil Michal. "Jakmile se nyní rozjede autorizovaný přístup přes MojeID a zvýší se počet potenciálních testerů editoru, očekávám a vítám jakékoliv konstruktivní připomínky k designu, intuitivnosti ovládání a funkčnosti vč. návrhů řešení. A protože jde o API rozhraní, může si v případě zájmu kdokoliv naprogramovat pro svůj projekt i vlastní podobu editoru."
+</p>
+
+<p>
+Stejně jako ve dvou minulých Tématech tedy zakončujeme výzvou pro uživatele OSM a mappery - pomožte ve vývoji aplikace Photo DB připomínkami k jejímu editoru, nebo se zapojte např. do práce v doplňování hodnot ref=* u jednotlivých snímků tak, aby je bylo možné spárovat s aktivní vrstvou mapy. Kontakt na autora: michal.grezl [] openstreetmap tecka cz
+</p>
 
 <h2 >OSM CZ</h2>
 <ul>
