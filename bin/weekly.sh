@@ -28,6 +28,7 @@ sedfile "s/>About us</>O nás</;
          s/>Other .geo. things</>Ostatní "geo" záležitosti</;
          s/>Events</>Události</;
          s/>Upcoming Events</>Plánované události</;
+         s/>OSM in the media</>OSM v médiích</;
          s/>Long [tT]erm [dD]ates</>Pozdější důležité akce</;
          
          s/th>Software</th>software</;
