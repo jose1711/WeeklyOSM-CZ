@@ -40,7 +40,14 @@ sedfile "s/>About us</>O nás</;
          s/>What</>co</;
          s/>When</>kdy</;
          s/>Country</>země</;
+
+         s/>Dónde</>kde</;
+         s/>Qué</>co</;
+         s/>Fecha</>kdy</;
+         s/>País</>země</;
          
+         s/>translation</>překlad</;
+
          s/>‘’’/>/g;
          s/>'''/>/g;
 
