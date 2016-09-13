@@ -52,6 +52,8 @@ sedfile "s/>About us</>O nás</;
          s/>'''/>/g;
 
          s/[pP]rovided by the /Poskytuje /;
+         s/unfree software. See /nesvobodný software. Viz /;
+         s/>freesoftware</>svobodný software</;
         " $1.html
 
 vim $1.html
